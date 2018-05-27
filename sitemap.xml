@@ -93,21 +93,6 @@
   </url>
   
   <url>
-    <loc>https://vibrobox.github.io/preview.ru/team/aliaksandr-trus/</loc>
-    <lastmod>2018-05-27T05:34:13+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://vibrobox.github.io/preview.com/team/aliaksandr-trus/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ru"
-                href="https://vibrobox.github.io/preview.ru/team/aliaksandr-trus/"
-                />
-  </url>
-  
-  <url>
     <loc>https://vibrobox.github.io/preview.ru/team/anatoli-shevchenko/</loc>
     <lastmod>2018-05-16T20:38:11-07:00</lastmod>
     <xhtml:link
@@ -149,6 +134,21 @@
                 rel="alternate"
                 hreflang="ru"
                 href="https://vibrobox.github.io/preview.ru/team/artem-bourak/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://vibrobox.github.io/preview.ru/team/ivan-trus/</loc>
+    <lastmod>2018-05-27T11:52:16-07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://vibrobox.github.io/preview.com/team/ivan-trus/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ru"
+                href="https://vibrobox.github.io/preview.ru/team/ivan-trus/"
                 />
   </url>
   
