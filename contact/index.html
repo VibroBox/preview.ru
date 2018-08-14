@@ -6,9 +6,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="copyright" content="© 2018 VibroBox">
 
-<meta name="description" content="Наш главный офис в Таллине, а разработка и исследования ведутся в Минске. Пишите на почту или в FaceBook, мы отвечаем на каждое сообщение.">
+<meta name="description" content="Наш научно-исследовательский офис разработки находится в Минске. Пишите на почту или в FaceBook, мы отвечаем на каждое сообщение.">
 
-<meta name="keywords" content="контакты, адрес, офис, разработка, наука, исследования, где находится, Минск, Беларусь, Таллин">
+<meta name="keywords" content="контакты, адрес, офис, разработка, наука, исследования, разработка, где находится, Минск, Беларусь">
 
 <meta name="generator" content="Hugo 0.40.3" />
 
@@ -24,7 +24,7 @@
 
 <meta property="og:title" content="Наши контакты">
 <meta property="og:url" content="https://vibrobox.github.io/preview.ru/contact/">
-<meta property="og:description" content="Наш главный офис в Таллине, а разработка и исследования ведутся в Минске. Пишите на почту или в FaceBook, мы отвечаем на каждое сообщение.">
+<meta property="og:description" content="Наш научно-исследовательский офис разработки находится в Минске. Пишите на почту или в FaceBook, мы отвечаем на каждое сообщение.">
 <meta property="og:locale" content="ru_RU">
 
 
@@ -137,20 +137,12 @@
   <section class="contacts__offices">
     <div class="contacts__office">
       <h2 class="contacts__h2">
-        Главный офис:</h2>
-      <h3 class="contacts__h3">VibroBox OÜ</h3>
-      <address class="contacts__address">
-        Бульвар Равала 8, офис 810<br/>Таллин, 10143<br/>Эстония<br/><a href=tel:+3726027212>+372 602 7212</a>
-      </address>
-    </div>
-    <div class="contacts__office">
-      <h2 class="contacts__h2">
         Центр разработки:</h2>
       <h3 class="contacts__h3">
         ООО Сител
       </h3>
       <address class="contacts__address">
-        Логойский тракт 22A/2, офис 402<br/>г. Минск, 220090<br/>Беларусь<br/><a href=tel:+375291768335>+375 29 1768335</a>
+        Логойский тракт 22A, офис 223<br/>г. Минск, 220090<br/>Беларусь<br/><a href=tel:+375291768335>+375 29 1768335</a>
       </address>
     </div>
     <div class="contacts__social">
@@ -241,18 +233,15 @@ ga('send', 'pageview');
   var map = L.map('leaflet-map', { scrollWheelZoom: false, zoomControl: false, dragging: false, touchZoom: false, doubleClickZoom: false, tap: false, boxZoom: false, keyboard: false, zoomSnap: 0.1 });
   L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1Ijoidmlicm9ib3giLCJhIjoiY2l3Njhib2tqMDAwbzJ5czAxYTN4ZWt6dyJ9.1CqJcnto4oJNbHLvwzxc5A', {
     attribution: 'Данные карты © \x3ca href=\x27http:\/\/openstreetmap.org\/\x27\x3eOpenStreetMap\x3c\/a\x3e | Изображения © \x3ca href=\x27http:\/\/mapbox.com\/\x27\x3eMapbox\x3c\/a\x3e',
-    maxZoom: 19,
+    maxZoom: 6,
     id: 'vibrobox.28m6igh7',
     accessToken: 'pk.eyJ1Ijoidmlicm9ib3giLCJhIjoiY2l3Njhib2tqMDAwbzJ5czAxYTN4ZWt6dyJ9.1CqJcnto4oJNbHLvwzxc5A',
     detectRetina: true
 }).addTo(map);
-  var strHeadquarters = 'Главный офис';
   var strDevelopmentOffice = 'Центр разработки';
-  var tallinn = L.marker([59.43411, 24.75434], { title: strHeadquarters, alt: strHeadquarters }).addTo(map);
-  tallinn.bindPopup('<p>' + strHeadquarters + '</p>');
   var minsk = L.marker([53.94678, 27.61623], { title: strDevelopmentOffice, alt: strDevelopmentOffice }).addTo(map);
   minsk.bindPopup('<p>' + strDevelopmentOffice + '</p>');
-  var allMarkers = new L.featureGroup([minsk, tallinn,]);
+  var allMarkers = new L.featureGroup([minsk]);
   map.fitBounds(allMarkers.getBounds().pad(0.5));
 </script>
 
