@@ -35,7 +35,7 @@
 
 
 <link rel="stylesheet" type="text/css" href="/preview.com/css/style.css"  />
-<link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css" />
+<link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css" />
 
 <link rel="apple-touch-icon" href="/preview.ru/icons/apple-touch-icon.png?v=cce4bfba">
 <link rel="apple-touch-icon" sizes="60x60" href="/preview.ru/icons/apple-touch-icon-60x60.png?v=ac66a62b">
@@ -130,10 +130,70 @@
 <div class="preface preface--contacts">
   <p>Будем рады ответить на ваши вопросы по сервису и возможностям сотрудничества.</p>
 
-<p>Пишите нам на <a href="mailto:info@vibrobox.com">info@vibrobox.com</a> или в <a href="https://m.me/VibroBox">FaceBook</a></p>
+<p>Пишите нам на <a href="mailto:info@vibrobox.com">info@vibrobox.com</a>, в <a href="https://m.me/VibroBox">FaceBook</a> или используя форму для связи:</p>
 
 </div>
 <div class="contacts">
+  <section class=""><form id="contactForm">
+  <div class="contacts__row">
+    <input type="text" name="First Name" class="contacts__column" placeholder="Имя *" required>
+    <input type="text" name="Last Name" class="contacts__column" placeholder="Фамилия *" required>
+  </div>
+  <div class="contacts__row">
+    <input type="text" name="Company" class="contacts__column" placeholder="Организация">
+    <input type="text" name="Job Title" class="contacts__column" placeholder="Должность">
+  </div>
+  <div class="contacts__row">
+    <input type="email" name="Email" class="contacts__column" placeholder="Email *" required>
+    <input type="tel" name="Phone" class="contacts__column" placeholder="Телефон">
+  </div>
+  <div class="contacts__row">
+    <textarea name="Message" class="contacts__column100" rows="6" placeholder="Ваше сообщение *" required></textarea>
+  </div>
+  <div id="contactFormHint" class="contacts__hint">* Обязательные для заполнения поля</div>
+  <button type="submit" class="actionButton" onclick="onFormSubmit(this)">Отправить сообщение</button>
+</form>
+
+<script type="application/javascript">
+  function onFormSubmit(submit) {
+    const form = document.getElementById('contactForm');
+    if (!form.checkValidity())
+      return;
+    const url = 'https:\/\/uje07m6w3b.execute-api.eu-west-1.amazonaws.com\/dev\/send?source=vibrobox';
+    const toast = document.getElementById('contactFormHint');
+
+    toast.innerHTML = "Сообщение отправляется…";
+    submit.disabled = true;
+
+    let payload = {};
+    const inputs = form.elements;
+    for (i = 0; i < inputs.length; i++)
+      if (inputs[i].name)
+        payload[inputs[i].name] = inputs[i].value;
+
+    let req = new XMLHttpRequest();
+    req.open("POST", url, true);
+    req.setRequestHeader("Content-Type", "application/json");
+    req.onerror = function () {
+      submit.disabled = false;
+    };
+    req.onload = function () {
+      submit.disabled = false;
+      if (req.status < 400) {
+        toast.innerHTML = "Спасибо, что связались с нами. Мы обязательно вам ответим в ближайшее время.";
+        
+        for (i = 0; i < inputs.length; i++)
+          if (inputs[i].name)
+            inputs[i].value = '';
+      } else {
+        toast.innerHTML = "Ошибка отправки сообщения. Пожалуйста, напишите нам на электронную почту, или попробуйте ещё раз позднее.";
+        console.error("Request failed: " + req.statusText);
+      }
+    };
+    req.send(JSON.stringify(payload));
+  }
+</script>
+</section>
   <section class="contacts__offices">
     <div class="contacts__office">
       <h2 class="contacts__h2">Центр разработки</h2>
@@ -165,8 +225,8 @@
     </div>
   </section>
   
-  <section id="leaflet-map" class="leaflet-map"></section>
 </div>
+<section id="leaflet-map" class="leaflet-map"></section>
 
   </main>
   <footer class="footer">
@@ -231,9 +291,9 @@
     accessToken: 'pk.eyJ1Ijoidmlicm9ib3giLCJhIjoiY2l3Njhib2tqMDAwbzJ5czAxYTN4ZWt6dyJ9.1CqJcnto4oJNbHLvwzxc5A',
     detectRetina: true
   }).addTo(map);
-  var strDevelopmentOffice = 'Центр разработки';
-  var minsk = L.marker([53.94678, 27.61623], { title: strDevelopmentOffice, alt: strDevelopmentOffice }).addTo(map);
-  minsk.bindPopup('<p>' + strDevelopmentOffice + '</p>');
+  var strTitle = 'Центр разработки';
+  var minsk = L.marker([53.94678, 27.61623], { title: strTitle, alt: strTitle }).addTo(map);
+  minsk.bindPopup('<p>' + strTitle + '</p>');
   var allMarkers = new L.featureGroup([minsk]);
   map.fitBounds(allMarkers.getBounds().pad(0.5));
 </script>
