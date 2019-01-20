@@ -89,6 +89,16 @@ a {
   .no-print * {
     display: none !important; } }
 
+input,
+button,
+select,
+optgroup,
+textarea {
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit; }
+
 .footer {
   display: flex;
   display: -webkit-flex;
@@ -440,7 +450,7 @@ aside {
   display: inline-block;
   text-decoration: none;
   border: 1px solid #0188c9; }
-  .actionButton:hover {
+  .actionButton:hover:enabled {
     background-color: #fff;
     color: #0188c9; }
 
