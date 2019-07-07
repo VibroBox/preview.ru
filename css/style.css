@@ -1062,15 +1062,17 @@ html[lang="ru"] .system-container__g-report:after {
       .content img {
         max-width: 60%;
         max-height: 60%; } }
-  @media (max-width: 768px) {
-    .content figure {
-      width: 100%;
-      height: auto;
-      margin: 1rem 0 1rem 0; } }
-  .content figure figcaption {
-    text-align: center;
-    font-size: 0.8rem;
-    font-style: italic; }
+  .content figure {
+    margin: 0; }
+    @media (max-width: 768px) {
+      .content figure {
+        width: 100%;
+        height: auto;
+        margin: 1rem 0 1rem 0; } }
+    .content figure figcaption {
+      text-align: center;
+      font-size: 0.8rem;
+      font-style: italic; }
   .content table {
     table-layout: fixed;
     width: 100%; }
@@ -1079,6 +1081,29 @@ html[lang="ru"] .system-container__g-report:after {
   .content-news img {
     max-width: 70%;
     max-height: 70%; } }
+
+.content-video-container {
+  margin: 1rem auto;
+  max-width: 100%;
+  overflow: hidden;
+  position: relative;
+  height: 550px; }
+  @media (min-width: 769px) {
+    .content-video-container {
+      max-width: 70%; } }
+  @media (max-width: 768px) {
+    .content-video-container {
+      height: 400px; } }
+  @media (max-width: 425px) {
+    .content-video-container {
+      height: 300px; } }
+  .content-video-container .content-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0; }
 
 .news-list li {
   margin-bottom: 0.5rem; }
