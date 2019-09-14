@@ -588,11 +588,12 @@ aside {
 
 .news__section {
   max-width: 100%;
-  margin-top: 1em;
-  border-bottom: 1px solid #6b6e70; }
+  padding-bottom: 0.5rem;
+  padding-top: 0.5rem;
+  border-bottom: 1px solid #6b6e70;
+  font-size: 0.85rem; }
   .news__section ul {
-    list-style: none;
-    font-style: italic; }
+    list-style: none; }
     .news__section ul li {
       margin-bottom: 0.2rem; }
       @media (min-width: 769px) {
