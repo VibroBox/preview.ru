@@ -171,6 +171,20 @@
   </url>
   
   <url>
+    <loc>https://vibrobox.github.io/preview.ru/team/kiril-zhukovsky/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://vibrobox.github.io/preview.com/team/kiril-zhukovsky/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ru"
+                href="https://vibrobox.github.io/preview.ru/team/kiril-zhukovsky/"
+                />
+  </url>
+  
+  <url>
     <loc>https://vibrobox.github.io/preview.ru/team/nikita-kosmach/</loc>
     <xhtml:link
                 rel="alternate"
@@ -223,6 +237,20 @@
                 rel="alternate"
                 hreflang="ru"
                 href="https://vibrobox.github.io/preview.ru/team/roman-tolkach/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://vibrobox.github.io/preview.ru/team/timofei-rachkovsky/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://vibrobox.github.io/preview.com/team/timofei-rachkovsky/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ru"
+                href="https://vibrobox.github.io/preview.ru/team/timofei-rachkovsky/"
                 />
   </url>
   
